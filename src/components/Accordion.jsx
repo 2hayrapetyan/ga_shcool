@@ -3,7 +3,7 @@ import dropdownicon from "../images/dropdown.png";
 
 function Accordion() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState("USD"); // Изначально выбранная валюта - USD
+  const [selectedCurrency, setSelectedCurrency] = useState("USD");
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -16,32 +16,51 @@ function Accordion() {
 
   return (
     <>
-      <div className='accordion-container'>
-        <h2 onClick={toggleAccordion}>
-          {selectedCurrency}{" "}
-          <img
-              src={dropdownicon}
-              alt=''
-              style={{
-                transition: "all .3s ease-in-out",
-                transform: isOpen ? "" : "rotate(180deg)",
-              }}
-            />
-        </h2>
-        {isOpen && (
-          <div className='dropdown-currency'>
-            <button id='button' onClick={() => handleCurrencyChange("AMD")}>
-              AMD
-            </button>
-            <button id='button' onClick={() => handleCurrencyChange("USD")}>
-              USD
-            </button>
-            <button id='button' onClick={() => handleCurrencyChange("JOD")}>
-              JOD
-            </button>
+      <span className='more'>
+        Monthly cost: &nbsp;
+        <span style={{ fontSize: "24px", fontWeight: "500", display: "flex" }}>
+          {selectedCurrency === "USD"
+            ? 77
+            : selectedCurrency === "AMD"
+            ? 30000
+            : selectedCurrency === "JOD"
+            ? 55
+            : ""}
+          &nbsp;
+        </span>
+        <small style={{ fontSize: "13px" }}>
+          <div className='accordion-container'>
+            <h2
+              onClick={toggleAccordion}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              {selectedCurrency}{" "}
+              <img
+                src={dropdownicon}
+                alt=''
+                style={{
+                  transition: "all .3s ease-in-out",
+                  transform: isOpen ? "" : "rotate(180deg)",
+                }}
+              />
+              &nbsp;
+            </h2>
+            {isOpen && (
+              <div className='dropdown-currency'>
+                <button id='button' onClick={() => handleCurrencyChange("AMD")}>
+                  AMD
+                </button>
+                <button id='button' onClick={() => handleCurrencyChange("USD")}>
+                  USD
+                </button>
+                <button id='button' onClick={() => handleCurrencyChange("JOD")}>
+                  JOD
+                </button>
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </small>
+      </span>
       <style>
         {`
     .accordion-container {

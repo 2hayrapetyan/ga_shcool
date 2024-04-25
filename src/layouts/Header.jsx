@@ -1,28 +1,39 @@
 import Button from "../components/Button";
 import Container from "../components/Container";
-
+import dropdownicon from "../images/dropdown.png";
 
 function Header() {
   return (
     <>
-    <Container>
-      <div className='header'>
-        <div className='left'>
-          <ul>
-            <li className="logo">GA</li>
-            <li>About Us</li>
-            <li>Blog</li>
-          </ul>
+      <Container>
+        <div className='header'>
+          <div className='left'>
+            <ul>
+              <li className='logo'>GA</li>
+              <li>About Us</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          <div className='right'>
+            <ul>
+              <li style={{ fontWeight: 400 ,display:'flex',alignItems:'center'}} >
+                Enlglish{" "}
+                <img
+                  src={dropdownicon}
+                  alt=''
+                  style={{
+                    transform: "rotate(180deg)",
+                  }}
+                />
+              </li>
+              <li>Sign in</li>
+              <li>
+                <Button small>Sign Up</Button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className='right'>
-          <ul>
-            <li style={{ fontWeight: 400 }}>Enlglish &#11167;</li>
-            <li>Sign in</li>
-            <li><Button small>Sign Up</Button></li>
-          </ul>
-        </div>
-      </div>
-    </Container>
+      </Container>
 
       <style>{`
     .header{

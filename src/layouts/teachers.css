@@ -1,0 +1,12 @@
+.teachers-parent{
+    padding: 100px 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teachers-parent h3{
+    font-size: 48px;
+    font-weight: 600;
+    color: #06262F;
+    margin-bottom: 24px;
+}

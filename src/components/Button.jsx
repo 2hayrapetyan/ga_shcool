@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line react/no-unknown-property
 
-export default function Button({ children, large, small }) {
+export default function Button({ children, large, small,full }) {
   return (
     <>
       <button
-        className={`button ${small ? "small" : ""} ${large ? "large" : ""}`}
+        className={`button ${small ? "small" : ""} ${large ? "large" : ""} ${full ? "full" : ""}`}
       >
         {children}
       </button>
@@ -24,6 +24,12 @@ export default function Button({ children, large, small }) {
       }
       button:active{
           background:#61B5CB ;
+      }
+      .full{
+        padding: 8px 128px;
+        font-size:12px;
+        font-weight:700;
+        border-radius: 20px;
       }
         .small {
           padding: 10px 16px;

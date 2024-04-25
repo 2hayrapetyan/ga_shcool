@@ -1,0 +1,43 @@
+.hero-card{
+    border: .6px solid #337283;
+    border-radius: 16px;
+    padding: 24px 12px;
+    width: 630px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.teacher-image{
+    position: relative;
+}
+.teacher-image::after{
+    content: "";
+    background: #548693;
+    height: 311px;
+    width: 215px;
+    position: absolute;
+    top: 0%;
+    left: 22%;
+    z-index: -1;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    margin: 20px 0;
+}
+.skill-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #06262F;
+    font-size: 13px;
+    font-weight: 500;
+}
+.skill-item p {
+    font-weight: 400;
+}
+.skill-item img{
+    vertical-align: middle;
+}

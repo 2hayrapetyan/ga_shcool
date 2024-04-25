@@ -2,7 +2,7 @@
 
 import Accordion from "./Accordion";
 
-function Card({ title, approach, lessons, duration, cost }) {
+function Card({ title, approach, lessons, duration }) {
   return (
     <>
       <div className='card-parent'>
@@ -12,23 +12,12 @@ function Card({ title, approach, lessons, duration, cost }) {
         </div>
         <div className='description'>
           <span className='more'>
-            Number of lessons: <span>{lessons}</span>
+            Number of lessons:  &nbsp;<span>{lessons}</span>
           </span>
           <span className='more'>
-            Duration of each lesson: <span>{duration} hour</span>
+            Duration of each lesson: &nbsp;<span>{duration} hour</span>
           </span>
-          <span className='more'>
-            Monthly cost:{" "}
-            <span
-              style={{ fontSize: "24px", fontWeight: "500", display: "flex" }}
-            >
-              {cost}{" "}
-              <small style={{ fontSize: "13px" }}>
-                {" "}
-                <Accordion title='AMD' />
-              </small>
-            </span>
-          </span>
+          <Accordion title='AMD' />
         </div>
       </div>
       <style>{`
@@ -48,7 +37,7 @@ function Card({ title, approach, lessons, duration, cost }) {
             }
             
             .description{
-                padding: 16px 31px;
+                padding: 16px 22px;
                 border-radius: 16px 16px 15px 15px;
                 background: #FFF;
                 display: flex;
@@ -59,7 +48,7 @@ function Card({ title, approach, lessons, duration, cost }) {
             .more{
               display:flex;
               align-items:baseline;
-              gap:10px;
+              justify-content: flex-start;
                 font-weight: 500;
                 font-size: 15px;
             }

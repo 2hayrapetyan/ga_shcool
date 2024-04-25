@@ -21,7 +21,6 @@ function Packages() {
                   approach='individual'
                   lessons='10'
                   duration='1'
-                  cost='35000'
                 />
               </div>
               <div>
@@ -30,7 +29,6 @@ function Packages() {
                   approach='2 people in a group'
                   lessons='10'
                   duration='1'
-                  cost='27000'
                 />
               </div>
               <div>
@@ -39,7 +37,6 @@ function Packages() {
                   approach='4 people in a group'
                   lessons='10'
                   duration='1'
-                  cost='25000'
                 />
               </div>
               <div>
@@ -48,7 +45,6 @@ function Packages() {
                   approach='individual'
                   lessons='10'
                   duration='1'
-                  cost='40000'
                 />
               </div>
               <img src={arrow} alt='' className='arrow' />
