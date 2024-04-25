@@ -1,0 +1,44 @@
+.footer-section-one {
+  padding: 67px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.footer-section-two {
+  padding: 14px 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #0f4b5b;
+}
+
+.about-us{
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    text-align: start;
+}
+.about-us li{
+    font-size: 14px;
+    color: #B4B4B4;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.contact-us{
+    text-align: end;
+   color: #FFFFFF;
+}
+.contact-us ul li{
+    margin: 4px 0;
+}
+.footer-logo{
+    font-size: 48px;
+    font-family: Trirong;
+}
+
+#heading{
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
