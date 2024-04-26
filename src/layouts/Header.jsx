@@ -17,7 +17,7 @@ function Header() {
           <div className='right'>
             <ul>
               <li style={{ fontWeight: 400 ,display:'flex',alignItems:'center'}} >
-                Enlglish{" "}
+                English{" "}
                 <img
                   src={dropdownicon}
                   alt=''
